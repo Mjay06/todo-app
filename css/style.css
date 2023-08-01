@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(235, 21%, 11%);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.head {
+  margin: 0 auto;
+  height: 175px;
+  background-image: url("/images/bg-desktop-dark.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .head {
+    background-image: url(/images/bg-mobile-dark.jpg);
+  }
+}
+
+.logo {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 90%;
+  }
+}
+.logo__text {
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: white;
+}
+.logo__dark {
+  width: 3rem;
+}
+@media screen and (max-width: 800px) {
+  .logo__dark {
+    width: 2.5rem;
+  }
+}
+
+.searchbar {
+  width: 40%;
+  margin: 3rem 0 1rem 0;
+  display: flex;
+  height: 55px;
+}
+@media screen and (max-width: 800px) {
+  .searchbar {
+    width: 90%;
+  }
+}
+.searchbar__add {
+  color: white;
+  height: 100%;
+  background-color: black;
+  width: 10%;
+  text-align: center;
+  padding: 20px 0px;
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+  font-family: inherit;
+}
+@media screen and (max-width: 800px) {
+  .searchbar__add {
+    display: none;
+  }
+}
+.searchbar__box {
+  width: 90%;
+  border: solid transparent 1pt;
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: hsl(235, 24%, 19%);
+  font-family: inherit;
+  color: white;
+}
+.searchbar__box:focus-within {
+  outline: none;
+}
+@media screen and (max-width: 800px) {
+  .searchbar__box {
+    width: 120%;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+}
+
+main {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todos {
+  width: 40%;
+  background-color: hsl(233, 14%, 35%);
+  margin: 4rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 800px) {
+  .todos {
+    width: 90%;
+  }
+}
+.todos_circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: solid hsl(234, 11%, 52%) 1pt;
+  margin-right: 10px;
+}
+.todos_circle:hover {
+  border: solid hsl(280, 87%, 65%) 1pt;
+}
+.todos_circle._active {
+  background-image: url(/images/icon-check.svg), linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.todos__lists__one {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  height: 55px;
+  align-items: center;
+  padding: 15px;
+  background-color: hsl(235, 24%, 19%);
+  display: flex;
+  justify-content: space-between;
+}
+.todos__lists__one_text {
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(233, 14%, 53%);
+}
+@media screen and (max-width: 800px) {
+  .todos__lists__one_text {
+    font-size: 16px;
+  }
+}
+.todos__lists__one_text_done {
+  text-decoration: line-through;
+}
+.todos__lists__one_image path {
+  fill: hsl(233, 14%, 53%);
+  opacity: 0;
+}
+.todos__lists__one_image path:hover {
+  fill: red;
+}
+.todos__lists__one:not(:first-child) {
+  margin: 0.1rem 0;
+  border-radius: 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: hsl(233, 14%, 53%);
+}
+
+.container_todo {
+  display: flex;
+}
+
+.todos__lists__one:hover .todos__lists__one_image path {
+  opacity: 1;
+}
+
+.filter {
+  display: flex;
+  width: 40%;
+  background-color: hsl(235, 24%, 19%);
+  margin: 4rem 0;
+  border-radius: 10px;
+  padding: 1.5rem 0;
+  justify-content: center;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 800px) {
+  .filter {
+    width: 90%;
+  }
+}
+.filter-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: hsl(233, 14%, 53%);
+}
+@media screen and (max-width: 414px) {
+  .filter-text {
+    font-size: 1.6rem;
+  }
+}
+.filter-text_active {
+  color: rgb(169, 169, 255);
+}
+.filter-text:not(:last-child) {
+  margin-right: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

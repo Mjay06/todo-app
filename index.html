@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <div class="logo">
+        <h4 class="logo__text">TODO</h4>
+        <img src="/images/icon-sun.svg" alt="" class="logo__dark" />
+      </div>
+      <nav class="searchbar">
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          class="searchbar__box"
+        />
+        <span class="searchbar__add">ADD</span>
+      </nav>
+    </header>
+    <main>
+      <section class="todos">
+        <div class="todosboxcontainment"></div>
+
+        <div
+          class="todos__lists__one items"
+          style="border-radius: 0 0 10px 10px"
+        >
+          <span class="items_left">0 item left</span>
+          <span class="items_clear">Clear completed</span>
+        </div>
+      </section>
+      <section class="filter">
+        <h4 class="filter-text filter-text_active all">All</h4>
+        <h4 class="filter-text active">Active</h4>
+        <h4 class="filter-text complete">Completed</h4>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#"> Ogunyemi Oluwasemiloore </a>.
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
