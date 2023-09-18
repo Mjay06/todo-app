@@ -35,15 +35,6 @@ let data = inidata ? inidata : [
 ] 
 
 
-
-
-
-
-
-
-
-
-
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("todos__lists__one_image")) {
     var container = event.target.closest(".todos__lists__one");
